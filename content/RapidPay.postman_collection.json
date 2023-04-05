@@ -1,0 +1,180 @@
+{
+	"info": {
+		"_postman_id": "e619b814-a2de-4cf9-bdfa-8aab4e608bfc",
+		"name": "RapidPay",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "6516501"
+	},
+	"item": [
+		{
+			"name": "Get Card Balance",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTUxMiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjEiLCJleHAiOjE2ODA2OTY0NDEsImlzcyI6Imh0dHBzOi8vd3d3Lmdvb2dsZS5jb20vIiwiYXVkIjoiaHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS8ifQ.ftT-DKeCtcKEb63Za23lbyRoIg_SVR2uSV2hOzLpVnJgwEudMSTdpWQVMzN2BABQ2GnVYu1mMHwNG7a5p4Ua5g",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7001/api/cards/1/balances",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7001",
+					"path": [
+						"api",
+						"cards",
+						"1",
+						"balances"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Card",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTUxMiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjEiLCJleHAiOjE2ODA2OTYzOTUsImlzcyI6Imh0dHBzOi8vd3d3Lmdvb2dsZS5jb20vIiwiYXVkIjoiaHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS8ifQ.r_jNvtC8cw4qzK7PkL3HSUJ5U8-IUx6ovcSvEPF2gjWeAsvyzDa6GcgTNpYsRh5SszkQtOSlIuq46ZYDAlpBKQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"number\": \"111111111111111\",\r\n    \"holder\": \"Alfredo Sanchez\",\r\n    \"expirationMonth\": 6,\r\n    \"expirationYear\": 2023,\r\n    \"cvv\": 501,\r\n    \"balanceAmount\": 1000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7001/api/cards",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7001",
+					"path": [
+						"api",
+						"cards"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Sign In",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"aldosan33\",\r\n    \"password\": \"Adonis@10\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7001/api/auth/sign-in",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7001",
+					"path": [
+						"api",
+						"auth",
+						"sign-in"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Sign Up",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"aldosan33\",\r\n    \"password\": \"Adonis@10\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7001/api/auth/sign-up",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7001",
+					"path": [
+						"api",
+						"auth",
+						"sign-up"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Payment",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTUxMiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjEiLCJleHAiOjE2ODA2OTY0NDEsImlzcyI6Imh0dHBzOi8vd3d3Lmdvb2dsZS5jb20vIiwiYXVkIjoiaHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS8ifQ.ftT-DKeCtcKEb63Za23lbyRoIg_SVR2uSV2hOzLpVnJgwEudMSTdpWQVMzN2BABQ2GnVYu1mMHwNG7a5p4Ua5g",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"cardId\": 1,\r\n    \"description\": \"payment 1\",\r\n    \"amount\": 200\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7001/api/payments",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7001",
+					"path": [
+						"api",
+						"payments"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
