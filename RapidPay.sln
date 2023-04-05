@@ -5,7 +5,7 @@ VisualStudioVersion = 17.0.32014.148
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{E5F55FBB-299F-48DA-BB3B-1BA5366D2B38}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RapidPay.Domain", "src\Domain\RapidPay.Domain\RapidPay.Domain.csproj", "{CB63C6C6-54C7-4B4C-AD61-78F3DD8E9CF2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RapidPay.Domain", "src\RapidPay.Domain\RapidPay.Domain.csproj", "{CB63C6C6-54C7-4B4C-AD61-78F3DD8E9CF2}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RapidPay.Infrastructure", "src\RapidPay.Infrastructure\RapidPay.Infrastructure.csproj", "{0A223CFC-3072-42E8-98FF-485FA1CEFD0E}"
 EndProject
